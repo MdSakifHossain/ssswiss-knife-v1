@@ -21,6 +21,7 @@ import {
   MoonIcon,
   SalahIcon,
   Square01Icon,
+  TheProphetsMosqueIcon,
 } from "@hugeicons/core-free-icons";
 
 // ===== MAIN STUFF =======================================================
@@ -37,6 +38,7 @@ export function CommandPalette() {
     // Navigation actions
     goMultiplicationTable: () => navigate("/multiplication_table"),
     goTaraweehCounter: () => navigate("/taraweeh_counter"),
+    goSalahIntentions: () => navigate("/salah_intentions"),
 
     // Theme/Cursor actions
     toggleTheme: () => setTheme((prev) => (prev === "dark" ? "light" : "dark")),
@@ -113,6 +115,12 @@ function createCPConfig({ closeCP, commands }) {
         icon: SalahIcon,
         shortcut: "",
         action: () => runCommand(commands.goTaraweehCounter),
+      },
+      {
+        label: "Salah Intention / Niyah",
+        icon: TheProphetsMosqueIcon,
+        shortcut: "",
+        action: () => runCommand(commands.goSalahIntentions),
       },
     ],
     settings: [
