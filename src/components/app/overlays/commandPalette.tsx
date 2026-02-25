@@ -1,6 +1,5 @@
 // @ts-nocheck
 
-import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandDialog,
@@ -18,13 +17,10 @@ import { Kbd } from "@/components/ui/kbd";
 import { useAppConfig } from "@/contexts/appConfig/AppConfigProvider";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Home03Icon,
   Menu11Icon,
   MoonIcon,
   SalahIcon,
-  Settings02Icon,
   Square01Icon,
-  UserIcon,
 } from "@hugeicons/core-free-icons";
 
 // ===== MAIN STUFF =======================================================
@@ -39,9 +35,6 @@ export function CommandPalette() {
 
   const commands = {
     // Navigation actions
-    goHome: () => navigate("/"),
-    goProfile: () => navigate("/profile"),
-    goSettings: () => navigate("/settings"),
     goMultiplicationTable: () => navigate("/multiplication_table"),
     goTaraweehCounter: () => navigate("/taraweeh_counter"),
 
@@ -68,20 +61,11 @@ export function CommandPalette() {
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
 
-            <CommandGroup heading="Navigation">
-              {CPObj.navigation.map((item, index) => (
-                <CmdItm key={index} item={item} />
-              ))}
-            </CommandGroup>
-
-            <CommandSeparator />
-
             <CommandGroup heading="Tools">
               {CPObj.tools.map((item, index) => (
                 <CmdItm key={index} item={item} />
               ))}
             </CommandGroup>
-
             <CommandSeparator />
 
             <CommandGroup heading="Settings">
@@ -117,14 +101,6 @@ function createCPConfig({ closeCP, commands }) {
   };
 
   return {
-    navigation: [
-      {
-        label: "Home",
-        icon: Home03Icon,
-        shortcut: "",
-        action: () => runCommand(commands.goHome),
-      },
-    ],
     tools: [
       {
         label: "Multiplication Table",
@@ -141,22 +117,10 @@ function createCPConfig({ closeCP, commands }) {
     ],
     settings: [
       {
-        label: "Profile",
-        icon: UserIcon,
-        shortcut: "",
-        action: () => runCommand(commands.goProfile),
-      },
-      {
         label: "Dark Mode",
         icon: MoonIcon,
         shortcut: "",
         action: () => runCommand(commands.toggleTheme),
-      },
-      {
-        label: "Settings",
-        icon: Settings02Icon,
-        shortcut: "",
-        action: () => runCommand(commands.goSettings),
       },
     ],
   };
