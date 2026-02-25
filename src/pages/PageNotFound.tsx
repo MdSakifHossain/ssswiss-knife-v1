@@ -23,7 +23,7 @@ function PageLayout({ children }) {
 function TopPart() {
   return (
     <div className="flex flex-col items-center gap-2">
-      <img src="/page-not-found.svg" alt="Not Found" className="w-3/12" />
+      <img src="/page-not-found.svg" alt="Not Found" className="w-7/12" />
       <h2 className="text-2xl font-medium">Page Not Found</h2>
     </div>
   );
