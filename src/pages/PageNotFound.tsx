@@ -1,5 +1,6 @@
 // @ts-nocheck
 
+import GoBackBtn from "@/components/app/reusables/GoBackBtn";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 
@@ -14,7 +15,8 @@ export default function PageNotFound() {
 
 function PageLayout({ children }) {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center gap-8">
+    <div className="relative flex-1 flex flex-col items-center justify-center gap-8">
+      <GoBackBtn className="absolute top-0 left-0" />
       {children}
     </div>
   );
