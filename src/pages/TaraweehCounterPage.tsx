@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 export default function TaraweehCounterPage() {
   return (
-    <MobileContent className="gap-8">
+    <MobileContent>
       <PageHeader
         heading="Taraweeh Counter"
         description="Keep going and keep doing the good deeds."
