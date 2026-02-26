@@ -117,7 +117,7 @@ function createCPConfig({ closeCP, commands }) {
         action: () => runCommand(commands.goTaraweehCounter),
       },
       {
-        label: "Salah Intention / Niyah",
+        label: "Salah Intention / Niyat",
         icon: TheProphetsMosqueIcon,
         shortcut: "",
         action: () => runCommand(commands.goSalahIntentions),
