@@ -13,12 +13,21 @@ export default function MobileContent({
     <div
       className={`flex-1 flex flex-col items-start justify-start gap-4 ${className}`}
     >
-      {goBack && <GoBackBtn />}
-      {(pageHeading || pageDescription) && (
-        <PageHeader heading={pageHeading} description={pageDescription} />
-      )}
-
+      <GoBack goBack={goBack} />
+      <PageHead pageHeading={pageHeading} pageDescription={pageDescription} />
       {children}
     </div>
+  );
+}
+
+function GoBack({ goBack }) {
+  return goBack && <GoBackBtn />;
+}
+
+function PageHead({ pageHeading, pageDescription }) {
+  return (
+    (pageHeading || pageDescription) && (
+      <PageHeader heading={pageHeading} description={pageDescription} />
+    )
   );
 }
