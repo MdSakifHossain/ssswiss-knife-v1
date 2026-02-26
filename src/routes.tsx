@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router";
 
 import App from "./layouts/App";
 import LoadingSpinner from "./components/app/reusables/LoadingSpinner";
+import SalahIntentionsPage from "./pages/SalahIntentionsPage";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
@@ -37,6 +38,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<LoadingSpinner />}>
             <TaraweehCounterPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "salah_intentions",
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <SalahIntentionsPage />
           </Suspense>
         ),
       },
