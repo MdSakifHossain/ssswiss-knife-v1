@@ -1,17 +1,19 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router";
-
+// layout and other simple component
 import App from "./layouts/App";
 import LoadingSpinner from "./components/app/reusables/LoadingSpinner";
-import SalahIntentionsPage from "./pages/SalahIntentionsPage";
-import FazrNiyatsPage from "./pages/fiveSalahNiyat/FazrNiyatsPage";
-
+// huge sized pages for lazy loading
 const Homepage = lazy(() => import("./pages/Homepage"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 const MultiplicationTableMakerPage = lazy(
   () => import("./pages/MultiplicationTableMakerPage"),
 );
 const TaraweehCounterPage = lazy(() => import("./pages/TaraweehCounterPage"));
+const SalahIntentionsPage = lazy(() => import("./pages/SalahIntentionsPage"));
+const FazrNiyatsPage = lazy(
+  () => import("./pages/fiveSalahNiyat/FazrNiyatsPage"),
+);
 
 export const router = createBrowserRouter([
   {
