@@ -7,7 +7,7 @@ const FrameBtn = ({ to, className = "", children, ...props }) => {
     <Link to={to} className="w-full">
       <WarButton
         variant="frame"
-        className={`w-full md:w-auto py-6 px-10 ${className}`}
+        className={`w-full md:w-auto py-7 px-10 ${className}`}
         {...props}
       >
         {children}
