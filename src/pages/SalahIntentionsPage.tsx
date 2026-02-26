@@ -21,7 +21,7 @@ function SalahButtonsContainer({ waqts }) {
       <div>
         {waqts.map((w, i) => (
           <FrameBtn
-            to={`/salah_intentions/${w}`}
+            to={`/salah_intentions/${w}_niyats`}
             className="capitalize text-base"
             key={i}
           >

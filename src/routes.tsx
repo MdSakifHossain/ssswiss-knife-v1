@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router";
 import App from "./layouts/App";
 import LoadingSpinner from "./components/app/reusables/LoadingSpinner";
 import SalahIntentionsPage from "./pages/SalahIntentionsPage";
+import FazrNiyatsPage from "./pages/fiveSalahNiyat/FazrNiyatsPage";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
@@ -43,11 +44,24 @@ export const router = createBrowserRouter([
       },
       {
         path: "salah_intentions",
-        element: (
-          <Suspense fallback={<LoadingSpinner />}>
-            <SalahIntentionsPage />
-          </Suspense>
-        ),
+        children: [
+          {
+            index: true,
+            element: (
+              <Suspense fallback={<LoadingSpinner />}>
+                <SalahIntentionsPage />
+              </Suspense>
+            ),
+          },
+          {
+            path: "fazr_niyats",
+            element: (
+              <Suspense fallback={<LoadingSpinner />}>
+                <FazrNiyatsPage />
+              </Suspense>
+            ),
+          },
+        ],
       },
     ],
   },
