@@ -4,9 +4,9 @@ import PageHeader from "../reusables/PageHeader";
 
 export default function MobileContent({
   goBack = false,
-  pageHeading,
-  pageDescription,
-  className,
+  pageHeading = "",
+  pageDescription = "",
+  className = "",
   children,
 }) {
   return (
