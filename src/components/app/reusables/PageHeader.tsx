@@ -1,7 +1,4 @@
-const PageHeader = ({
-  heading = "Provide Heading",
-  description = "Provide Description",
-}) => {
+const PageHeader = ({ heading = "", description = "" }) => {
   return (
     <div className="mx-auto w-full max-w-xs">
       <h1 className="text-2xl font-black">{heading}</h1>

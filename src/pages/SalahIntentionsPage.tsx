@@ -1,7 +1,6 @@
 // @ts-nocheck
 import MobileContent from "@/components/app/layouts/MobileContent";
 import FrameBtn from "@/components/app/reusables/FrameBtn";
-import PageHeader from "@/components/app/reusables/PageHeader";
 import {
   Card,
   CardContent,
@@ -15,8 +14,10 @@ export default function SalahIntentionsPage() {
   const waqts = ["fazr", "zohr", "asr", "magrib", "isha"];
 
   return (
-    <MobileContent>
-      <PageHeader heading="Salah Intentions Page" />
+    <MobileContent
+      pageHeading="Salah Intention Page"
+      pageDescription="No matter what, Always Complete 5 Times Prayer"
+    >
       <SalahButtonsContainer waqts={waqts} />
     </MobileContent>
   );

@@ -1,7 +1,6 @@
 // @ts-nocheck
 import MobileContent from "@/components/app/layouts/MobileContent";
 import CrystalBtn from "@/components/app/reusables/CrystalBtn";
-import PageHeader from "@/components/app/reusables/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ZapIcon } from "@hugeicons/core-free-icons";
@@ -10,12 +9,10 @@ import { useEffect, useState } from "react";
 
 export default function TaraweehCounterPage() {
   return (
-    <MobileContent>
-      <PageHeader
-        heading="Taraweeh Counter"
-        description="Keep going and keep doing the good deeds."
-      />
-
+    <MobileContent
+      pageHeading="Taraweeh Counter"
+      pageDescription="Keep going and keep doing the good deeds."
+    >
       <TaraweehCard />
     </MobileContent>
   );

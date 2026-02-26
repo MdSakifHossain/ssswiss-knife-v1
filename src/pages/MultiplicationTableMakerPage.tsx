@@ -13,7 +13,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import PageHeader from "@/components/app/reusables/PageHeader";
 import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
@@ -38,12 +37,10 @@ export default function MultiplicationTableMakerPage() {
   };
 
   return (
-    <MobileContent>
-      <PageHeader
-        heading="Multiplication Table Generator"
-        description="Just Write it down and it will do the job."
-      />
-
+    <MobileContent
+      pageHeading="Multiplication Table Generator"
+      pageDescription="Just Write it down and it will do the job."
+    >
       <TopCard title="Stats">
         <div className="text-sm flex flex-col gap-2">
           <StatRow v1="Base" v2={base} />
