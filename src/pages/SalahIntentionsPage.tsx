@@ -16,32 +16,37 @@ export default function SalahIntentionsPage() {
 
   return (
     <MobileContent>
-      <PageHeader heading="Salah Intentions Page" description="" />
-
-      <Card className="mx-auto w-full max-w-xs">
-        <CardHeader>
-          <CardTitle>All Five Prayer Time</CardTitle>
-          <CardDescription>
-            Jump on any Time Period by Clicking on.
-          </CardDescription>
-        </CardHeader>
-
-        <CardContent>
-          {waqts.map((w, i) => (
-            <FrameBtn
-              to={`/salah_intentions/${w}`}
-              className="capitalize"
-              key={i}
-            >
-              {w}
-            </FrameBtn>
-          ))}
-        </CardContent>
-
-        <CardFooter className="border-t text-xs text-muted-foreground flex justify-center">
-          There's Room for Improvements.
-        </CardFooter>
-      </Card>
+      <PageHeader heading="Salah Intentions Page" />
+      <SalahButtonsContainer waqts={waqts} />
     </MobileContent>
+  );
+}
+
+function SalahButtonsContainer({ waqts }) {
+  return (
+    <Card className="mx-auto w-full max-w-xs">
+      <CardHeader>
+        <CardTitle>All Five Prayer Time</CardTitle>
+        <CardDescription>
+          Jump on any Time Period by Clicking on.
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent>
+        {waqts.map((w, i) => (
+          <FrameBtn
+            to={`/salah_intentions/${w}`}
+            className="capitalize text-base"
+            key={i}
+          >
+            {w}
+          </FrameBtn>
+        ))}
+      </CardContent>
+
+      <CardFooter className="border-t text-xs text-muted-foreground flex justify-center">
+        There's Room for Improvements.
+      </CardFooter>
+    </Card>
   );
 }
