@@ -1,9 +1,10 @@
 // @ts-nocheck
 import MobileContent from "@/components/app/layouts/MobileContent";
 import FrameBtn from "@/components/app/reusables/FrameBtn";
+import { useLocation } from "react-router";
 
 export default function SalahIntentionsPage() {
-  const waqts = ["fazr", "zohr", "asr", "magrib", "isha"];
+  const waqts = ["fozor", "zohor", "asor", "magrib", "isha"];
 
   return (
     <MobileContent
@@ -16,12 +17,14 @@ export default function SalahIntentionsPage() {
 }
 
 function SalahButtonsContainer({ waqts }) {
+  const location = useLocation();
+
   return (
     <div className="flex-1 mx-auto w-full max-w-xs flex flex-col items-center justify-between">
       <div>
         {waqts.map((w, i) => (
           <FrameBtn
-            to={`/salah_intentions/${w}_niyats`}
+            to={`${location.pathname}/${w}`}
             className="capitalize text-base"
             key={i}
           >

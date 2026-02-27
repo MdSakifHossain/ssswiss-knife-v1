@@ -36,7 +36,7 @@ export function CommandPalette() {
 
   const commands = {
     // Navigation actions
-    goMultiplicationTable: () => navigate("/multiplication_table"),
+    goMultiplicationTable: () => navigate("/multiplication_table_maker"),
     goTaraweehCounter: () => navigate("/taraweeh_counter"),
     goSalahIntentions: () => navigate("/salah_intentions"),
 
