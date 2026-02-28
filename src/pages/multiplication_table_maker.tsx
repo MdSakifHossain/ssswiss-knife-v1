@@ -71,7 +71,7 @@ function StatRow({ v1 = "Key", v2 = "Value" }) {
 
 function TopCard({ title = "Title of the Card", children }) {
   return (
-    <Card size="sm" className="relative mx-auto w-full max-w-xs">
+    <Card size="sm" className="relative w-full">
       <CardHeader>
         <CardTitle className="font-black">{title}</CardTitle>
       </CardHeader>
@@ -168,7 +168,7 @@ function Dwawer({ base, setBase, maxMultiplier, setMaxMultiplier, defaults }) {
 
 function MultiplierCard({ base, maxMultiplier }) {
   return (
-    <Card size="sm" className="mx-auto w-full max-w-xs">
+    <Card size="sm" className="w-full">
       <CardContent className="flex flex-col gap-3">
         <Table>
           <TableHeader>

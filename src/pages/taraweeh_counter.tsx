@@ -39,7 +39,7 @@ function TaraweehCard() {
   }, [count]);
 
   return (
-    <Card size="sm" className="mx-auto w-full max-w-xs flex-1 relative">
+    <Card size="sm" className="w-full flex-1 relative">
       <CardContent className="flex-1 flex flex-col items-center justify-center gap-8">
         {count === defaults.maxCount ? (
           <p className={`text-3xl`}>✨ Congrats 🥳✨</p>

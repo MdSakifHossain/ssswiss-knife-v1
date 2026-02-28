@@ -20,7 +20,7 @@ function SalahButtonsContainer({ waqts }) {
   const location = useLocation();
 
   return (
-    <div className="flex-1 mx-auto w-full max-w-xs flex flex-col items-center justify-between">
+    <div className="flex-1 w-full flex flex-col items-center justify-between">
       <div>
         {waqts.map((w, i) => (
           <FrameBtn

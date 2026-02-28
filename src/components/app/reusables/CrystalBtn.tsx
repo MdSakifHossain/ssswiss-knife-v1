@@ -5,10 +5,7 @@ import { Link } from "react-router";
 const CrystalBtn = ({ to, className = "", children, ...props }) => {
   return (
     <Link to={to} className="w-full">
-      <WarButton
-        className={`w-full md:w-auto py-5 px-10 ${className}`}
-        {...props}
-      >
+      <WarButton className={`w-full py-5 px-10 ${className}`} {...props}>
         {children}
       </WarButton>
     </Link>

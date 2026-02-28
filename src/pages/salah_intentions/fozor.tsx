@@ -1,19 +1,8 @@
 // @ts-nocheck
 import MobileContent from "@/components/app/layouts/MobileContent";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  AiMagicIcon,
-  CircleArrowRight02Icon,
-  Link02Icon,
-  StarIcon,
-} from "@hugeicons/core-free-icons";
+import { Link02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 export default function FazrNiyatsPage() {
@@ -36,7 +25,7 @@ export default function FazrNiyatsPage() {
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="arabic" className="mx-auto w-full max-w-xs">
+    <Tabs defaultValue="arabic" className="w-full">
       <TabsList variant="">
         <TabsTrigger value="arabic">Arabic</TabsTrigger>
         <TabsTrigger value="pronunciation">Pronunciation</TabsTrigger>
@@ -44,7 +33,7 @@ export function TabsDemo() {
       </TabsList>
 
       <TabsContent value="arabic">
-        <Card className="mx-auto w-full max-w-xs">
+        <Card>
           <CardContent className="text-2xl text-left">
             نَوَايْتُ اَنْ اُصَلِّىَ لِلَّهِ تَعَالَى رَكْعَتَىْ صَلَوةِ
             الْفَجْرِ سُنَّةُ رَسُوْلُ اللهِ تَعَالَى مُتَوَجِّهًا اِلَى جِهَةِ
@@ -54,7 +43,7 @@ export function TabsDemo() {
       </TabsContent>
 
       <TabsContent value="pronunciation">
-        <Card className="mx-auto w-full max-w-xs">
+        <Card>
           <CardContent className="text-muted-foreground text-base">
             Nawai tuan usallia lillahi ta'ala rak'atai swalathil Fajre sunnathu
             rasulullahi ta'ala muthawaj-jihan ila jihatil ka'batish sharifathi,
