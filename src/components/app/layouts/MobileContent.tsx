@@ -11,7 +11,7 @@ export default function MobileContent({
 }) {
   return (
     <div
-      className={`flex-1 flex flex-col items-start justify-start gap-4 ${className}`}
+      className={`mx-auto w-full max-w-xs flex-1 flex flex-col items-start justify-start gap-4 ${className}`}
     >
       <GoBack goBack={goBack} />
       <PageHead pageHeading={pageHeading} pageDescription={pageDescription} />
