@@ -20,6 +20,7 @@ import {
   Menu11Icon,
   MoonIcon,
   SalahIcon,
+  SourceCodeIcon,
   Square01Icon,
   TheProphetsMosqueIcon,
 } from "@hugeicons/core-free-icons";
@@ -39,6 +40,12 @@ export function CommandPalette() {
     goMultiplicationTable: () => navigate("/multiplication_table_maker"),
     goTaraweehCounter: () => navigate("/taraweeh_counter"),
     goSalahIntentions: () => navigate("/salah_intentions"),
+    goGitHub: () =>
+      window.open(
+        "https://github.com/MdSakifHossain/ssswiss-knife-v1",
+        "_blank",
+        "noreferrer",
+      ),
 
     // Theme/Cursor actions
     toggleTheme: () => setTheme((prev) => (prev === "dark" ? "light" : "dark")),
@@ -129,6 +136,12 @@ function createCPConfig({ closeCP, commands }) {
         icon: MoonIcon,
         shortcut: "",
         action: () => runCommand(commands.toggleTheme),
+      },
+      {
+        label: "GitHub",
+        icon: SourceCodeIcon,
+        shortcut: "",
+        action: () => runCommand(commands.goGitHub),
       },
     ],
   };
