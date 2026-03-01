@@ -2,16 +2,15 @@
 import MobileContent from "@/components/app/layouts/MobileContent";
 import FrameBtn from "@/components/app/reusables/FrameBtn";
 import { useLocation } from "react-router";
+import { salah_names } from "@/constants/";
 
 export default function SalahIntentionsPage() {
-  const waqts = ["fozor", "zohor", "asor", "magrib", "isha"];
-
   return (
     <MobileContent
-      pageHeading="Salah Intention Page"
-      pageDescription="No matter what... Always Complete 5 Times Prayer"
+      pageHeading="Salah Intention / Niyat"
+      pageDescription="These prayers are obligatory for all Muslims and are a core pillar of Islamic practice."
     >
-      <SalahButtonsContainer waqts={waqts} />
+      <SalahButtonsContainer waqts={salah_names} />
     </MobileContent>
   );
 }

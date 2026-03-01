@@ -1,3 +1,4 @@
+export const salah_names = ["fajr", "zuhr", "asr", "maghrib", "isha"];
 export const salah_intentions = {
   fojor: [
     {

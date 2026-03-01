@@ -9,8 +9,8 @@ export default function FazrNiyatsPage() {
   return (
     <MobileContent
       goBack
-      pageHeading="Fazr Salah Niyat"
-      pageDescription="It's the hardest but if you are Praying at Fazr Time.. I'm so proud of you."
+      pageHeading="Fajr Salah Niyat"
+      pageDescription="4 rakaths (units) = 2 sunnath + 2 fard"
     >
       <div className="w-full grid grid-cols-1 gap-8">
         {fojorNiyats.map((niyat, i) => (
