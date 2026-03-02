@@ -19,22 +19,18 @@ function SalahButtonsContainer({ waqts }) {
   const location = useLocation();
 
   return (
-    <div className="flex-1 w-full flex flex-col items-center justify-between">
+    <div className="flex-1 w-full flex flex-col items-center justify-center">
       <div>
-        {waqts.map((w, i) => (
+        {waqts.map((waqt, i) => (
           <FrameBtn
-            to={`${location.pathname}/${w}`}
+            to={`${location.pathname}/${waqt}`}
             className="capitalize text-base"
             key={i}
           >
-            {w}
+            {waqt}
           </FrameBtn>
         ))}
       </div>
-
-      <p className="text-sm text-muted-foreground border-t w-full text-center pt-4">
-        There's Room for Improvements
-      </p>
     </div>
   );
 }
