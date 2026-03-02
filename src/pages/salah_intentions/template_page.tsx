@@ -1,24 +1,20 @@
 // @ts-nocheck
 import MobileContent from "@/components/app/layouts/MobileContent";
 import NiyatCard from "@/components/app/reusables/NiyatCard";
+import { default_fallbacks } from "@/constants";
 
 export default function FazrNiyatsPage() {
-  const default_fallback = {
-    heading: "Salah Page Heading",
-    description: "Salah Page Description",
-    niyats: new Array(3).fill(null),
-  };
-  const final_values = default_fallback;
+  const final_values = default_fallbacks.template_page;
 
   return (
     <MobileContent
       goBack
-      pageHeading={default_fallback.heading}
-      pageDescription={default_fallback.description}
+      pageHeading={final_values.heading}
+      pageDescription={final_values.description}
     >
       <div className="w-full grid grid-cols-1 gap-8">
         {final_values.niyats.map((niyat, i) => (
-          <NiyatCard niyat={niyat} key={i} />
+          <NiyatCard key={i} />
         ))}
       </div>
     </MobileContent>

@@ -1,20 +1,12 @@
 // @ts-nocheck
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { default_fallbacks } from "@/constants";
 import { Fire02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 export default function NiyatCard({ niyat }) {
-  const default_fallback = {
-    title: "Niyat Card Title",
-    apt: {
-      arabic: `بِرُوفِيدْ مِيْ ذَا فَالِيُوزْ`,
-      pronunciation: `birūfid mī dhā fālyūz`,
-      translation: `Provide me the Values`,
-    },
-  };
-
-  const final_values = niyat || default_fallback;
+  const final_values = niyat || default_fallbacks.niyat_card;
 
   return (
     <div className="flex flex-col gap-3.5 w-full">
