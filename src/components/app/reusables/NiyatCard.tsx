@@ -6,7 +6,7 @@ import { Fire02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 export default function NiyatCard({ niyat }) {
-  const final_values = niyat || default_fallbacks.niyat_card;
+  const final_value = niyat || default_fallbacks.niyat_card;
 
   return (
     <div className="flex flex-col gap-3.5 w-full">
@@ -16,10 +16,10 @@ export default function NiyatCard({ niyat }) {
           icon={Fire02Icon}
           strokeWidth={1.8}
         />
-        <span>{final_values.title}</span>
+        <span>{final_value.title}</span>
       </h3>
 
-      <NiyatTabs apt={final_values.apt} />
+      <NiyatTabs apt={final_value.apt} />
     </div>
   );
 }
