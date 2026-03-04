@@ -19,6 +19,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Menu11Icon,
   MoonIcon,
+  Ramadhan01Icon,
   SalahIcon,
   SourceCodeIcon,
   Square01Icon,
@@ -46,6 +47,7 @@ export function CommandPalette() {
         "_blank",
         "noreferrer",
       ),
+    goRamadanCalendar: () => navigate("/ramadan_calendar"),
 
     // Theme/Cursor actions
     toggleTheme: () => setTheme((prev) => (prev === "dark" ? "light" : "dark")),
@@ -128,6 +130,12 @@ function createCPConfig({ closeCP, commands }) {
         icon: TheProphetsMosqueIcon,
         shortcut: "",
         action: () => runCommand(commands.goSalahIntentions),
+      },
+      {
+        label: "Ramadan Calendar",
+        icon: Ramadhan01Icon,
+        shortcut: "",
+        action: () => runCommand(commands.goRamadanCalendar),
       },
     ],
     settings: [
