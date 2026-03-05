@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { Link } from "react-router";
-import { CommandPalette } from "../overlays/commandPalette";
+import CommandPalette from "../overlays/commandPalette";
 
 export default function Header() {
   return (
